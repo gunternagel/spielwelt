@@ -8,9 +8,8 @@ public class reactivedemo{
         
     }
 
-    public Object process(Observable<Integer> numbers) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'process'");
+    public java.util.List<Integer> findEvenNumbers(Observable<Integer> numbers) {
+        return numbers.filter(x -> (x % 2) == 0).toList().blockingGet();
     }
 
     
